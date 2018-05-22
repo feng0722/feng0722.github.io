@@ -1,12 +1,391 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>FengYoga</title>
+	<link rel="stylesheet" href="style/2018-05-21-yoga.css">
+	<link rel="stylesheet" href="swiper-4.2.6/dist/css/swiper.min.css">
+	<link href="style/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
+<!-- 摺疊效果 -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript">
+	$(document).ready(function(){
+	$('.ann_header')
+	.hover(function() {
+	cursorChange(this);
+	})
+	.click(function() {
+	foldToggle(this);
+	});
+	//.trigger('click');
+
+	$('.ann_sub_header')
+	.hover(function() {
+	cursorChange(this);
+	})
+	.click(function() {
+	foldToggle(this);
+	})
+	.trigger('click');  // 預設是折疊起來
+
+	});
+
+	// 打開or摺疊選單
+	function foldToggle(element) {
+	$(element).next('ul').slideToggle();
+	}
+
+	// 讓游標移到標題上時，圖案會變成手指
+	function cursorChange(element, cursorType) {
+	$(element).css('cursor', 'pointer');
+	}
+	</script>
+<!-- ************************************************ -->
 </head>
 <body>
-    <h1>Hello</h1>
+	<div class="navbar">
+		<div class="navbar_spacing">
+			<a href="" class="logo"></a>
+			<ul>
+				<a href="#Feng" class="btns"><b>Feng瑜珈</b></a>
+				<a href="#news" class="btns"><b>最新消息</b></a>
+				<a href="#setting" class="btns"><b>環境簡介</b></a>
+				<a href="#course" class="btns"><b>瑜珈課程</b></a>
+				<a href="#form" class="btns"><b>報名表</b></a>
+				<a href="#question" class="btns"><b>常見問題</b></a>
+			</ul>
+		</div>
+	</div>
+	<div class="navbar_phone">
+		<div class="logo"></div>
+		<div class="feng"><h1>Feng瑜珈教室</h1></div>
+		<div id="list" class="list">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+		<ul id="menu">
+			<li class="active"><a href="#Feng">Feng瑜珈</a></li>
+			<li class="active"><a href="#news">最新消息</a></li>
+			<li class="active"><a href="#setting">環境簡介</a></li>
+			<li class="active"><a href="#course">瑜珈課程</a></li>
+			<li class="active"><a href="#form">報名表</a></li>
+			<li class="active"><a href="#question">常見問題</a></li>
+		</ul>
+	</div>
+	<div id="Feng" class="navbar_mask"></div>
+	<div class="container">
+		<div id="Feng" class="blocks">
+<!-- *************************************************** -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide box1-1"><h2>更有活力、更加強壯、更為快樂，做就對了。</h2>
+					</div>
+					<div class="swiper-slide box1-2">
+						<h2>瑜珈是一種能修身養性的運動，藉由調身、調息、調心，以達到身心的合一。</h2>
+					</div>
+					<div class="swiper-slide box1-3"></div>
+					<div class="swiper-slide box1-4"></div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+<!-- *************************************************** -->
+  		</div>
+		<div id="news" class="navbar_mask"></div>
+		<div id="news" class="blocks"><h2>最新消息</h2>
+			<div class="btn-block">
+				<!-- <h2 style="text-align:center;">最新消息</h2> -->
+				<div id="news_a-1" href="#" onclick="changeNews(1)" class="nowShowB">綜合</div>
+				<div id="news_a-2" href="#" onclick="changeNews(2)" class="otherB">新聞</div>
+				<div id="news_a-3" href="#" onclick="changeNews(3)" class="otherB">活動</div>
+				<div id="news_a-4" href="#" onclick="changeNews(4)" class="otherB">其他</div>
+			</div>			
+			<div class="news_block_out">
+				<div class="news_block_in" style="line-height: 40px;">
+		<div id="news-1" class="showTabDiv" style='display:block;'>  
+			<b style="letter-spacing: 30px;">綜合</b><span></span><b style="letter-spacing: 100px;">內容</b>
+			<hr>
+			<div class="br" style="background-color: #fff;"></div>
+			<div class="br" style="background-color: #fcf;"></div>
+			<div class="br" style="background-color: #fff;"></div>
+		</div>  
+		<div id="news-2" class="showTabDiv" style='display:none;float:left;width:100%'> 
+			<b style="letter-spacing: 30px;">新聞</b><span></span><b style="letter-spacing: 200px;">內容</b>
+			<hr>
+			<div class="br" style="background-color: #fff;"></div>
+			<div class="br" style="background-color: #fcf;"></div>
+			<div class="br" style="background-color: #fff;"></div>
+		</div>  
+		<div id="news-3" class="showTabDiv" style='display:none;float:left;width:100%'> 
+			<b style="letter-spacing: 30px;">活動</b><span></span><b style="letter-spacing: 200px;">內容</b>
+			<hr>
+			<div class="br" style="background-color: #fff;"></div>
+			<div class="br" style="background-color: #fcf;"></div>
+			<div class="br" style="background-color: #fff;"></div>
+		</div>
+		<div id="news-4" class="showTabDiv" style='display:none;float:left;width:100%'>
+			<b style="letter-spacing: 30px;">其他</b><span></span><b style="letter-spacing: 200px;">內容</b>
+			<hr>
+			<div class="br" style="background-color: #fff;"></div>
+			<div class="br" style="background-color: #fcf;"></div>
+			<div class="br" style="background-color: #fff;"></div>
+		</div> 
+				</div>
+			</div>
+		</div>
+		<div id="setting" class="navbar_mask"></div>
+		<div id="setting" class="blocks">
+<!-- *************************************************** -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide box3-1"></div>
+					<div class="swiper-slide box3-2"><h2>給身體呼吸的時間</h2></div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+<!-- *************************************************** -->
+		</div>
+		<div id="course" class="navbar_mask"></div>
+		<div id="course">
+			<div class="blocks">
+				<h2>瑜珈課程</h2>
+				<div class="box6"></div>
+			</div>
+		<div id="type" class="blocks"><h2 style="font-size: 20px;color:#777;">課程種類</h2> 				
+			<div class="btn">
+				<ul>  
+					<li id="tab_a-1" onclick="changeTab(1)" class="nowShowA">
+						舒壓瑜伽
+					</li>  
+					<li id="tab_a-2" onclick="changeTab(2)" class="otherA">
+						塑身瑜珈
+					</li>  
+					<li id="tab_a-3" onclick="changeTab(3)" class="otherA">
+						兒童瑜珈
+					</li>
+					<li id="tab_a-4" onclick="changeTab(4)" class="otherA">
+						強力瑜珈
+					</li>  
+				</ul>  
+			</div>
+			<div class="type_block" style="line-height: 40px;">
+				<div id="tabs-1" class="type_block_yoga" style='display:block;'>  
+					結合冥想與基礎瑜伽伸展動作，帶領您進入內在喜悅與寧靜的世界。本課程有助於放鬆與舒緩，讓身，心產生共鳴，有著即和諧又平衡、即充滿活力又健康的感覺，一起進入內在真實的心靈層面吧！
+				</div>  
+				<div id="tabs-2" class="type_block_yoga" style='display:none;'>  
+					有挑戰性的串聯體位法，也更強效的增加肌耐力與柔軟度，淨化身體、防止體內廢物累積，維持正常
+				</div>  
+				<div id="tabs-3" class="type_block_yoga" style='display:none;'>  
+					專門為兒童設計的課程，促進身心成長，集中注意力，加成平衡，提高創造力，保持身體健康。
+				</div>
+				<div id="tabs-4" class="type_block_yoga" style='display:none;'>  
+					連貫的動態體姿並結合強而有力的呼吸法，鍛練身心與呼吸。強力瑜珈是結合強化新血功能運動與瑜珈術的運動。對鍛鍊心肺功能、體力與耐力及有助益。比連續做三個小時的運動消耗更多的熱量，讓身段更輕盈、強健、調和、靈活柔軟.
+				</div> 
+			</div>
+		</div>  
+			<div id="teacher" class="blocks"><h2>師資介紹</h2>
+				<div class="teacher pic"></div>
+				<div class="teacher skill" style="line-height: 40px;">
+					<ul>
+						<h3>name</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus labore dolorem, laborum. Ab eum, voluptates deleniti quos in quasi repellendus.</p>
+						<h4>mm</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, praesentium.</p>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="block_ill">
+			<div class="blocks box7">
+				<div class="box7_mask" style="line-height: 40px;">
+					<h2>上課須知</h2>
+					<ul>
+					<li>因個人衛生問題，請自備瑜珈墊及毛巾等個人物品。</li>
+					<li>上課前一個小時，請勿進食，以免課堂中不適，若必須吃，少量斟酌。</li>
+					<li>懷孕、身上有動過大手術或有心血管疾病者，在上課前必須先告知老師，會調整個人姿勢動作方式。</li>
+					</ul>
+				</div>				
+			</div>
+			<div id="form" class="blocks">
+				<div class="form_block" style="line-height: 40px;">
+					<form action="get.php" method="get">
+						<h2 text-align:center;>報名表</h2>
+						性別：<select name="sex" id="">
+							<option value="none">選擇</option>
+							<option value="woman">查母</option>
+							<option value="man">查普</option>
+						</select>
+						<hr>	
+						姓名：<input type='text'><br>			
+						<hr>
+						電話：<input type='text'><br>
+						<hr>
+						生日：<select name="Y" id="">
+							<option value="1911">1911</option>
+							<option value="1988">1988</option>
+							<option value="2000">2000</option>
+						</select>
+						<select name="M" id="">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+						<select name="D" id="">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3n">3</option>
+						</select>
+						信箱：<input type='text'><br>
+						<input type='reset' value='我要報名' style="position: absolute;right: 110px;bottom: 50px;">
+					</form>
+				</div>
+			</div>
+		<div id="question" class="navbar_mask" style="position: absolute;bottom: 0;"></div>
+		</div>
+		<div class="img_beach">
+		<div id="question" class="blocks">
+			<h2>常見問題</h2>
+			<div class="question_mask">
+			<ul>
+				<li id="ann1"><h3 class='ann_sub_header'>身體僵硬的人適合練習瑜珈嗎?</h3>
+					<ul style="line-height: 40px;">
+						<li>瑜珈練習是講究整體平衡的身心練習，身體僵硬似乎是弱點，但其實更能提醒你運用肌肉控制力來完成瑜珈動作，是較為安全的練習狀態。而身體柔軟度高的學員則需要提醒自己不能過於依賴天生的柔軟度，而忽略了肌肉控制力，導致傷害。
+						</li>
+					</ul>
+				</li>
+				<li id="ann2"><h3 class='ann_sub_header'>練習瑜珈有什麼好處?</h3>
+					<ul style="line-height: 40px;">
+						<li>在瑜珈練習中，需要專注於呼吸及如何使用肌群與骨骼，因此我們會暫時拋開腦袋裡的雜念，心靜，壓力自然輕，自律神經系統穩定之後，免疫力提升，還能減緩老化速度。
+						</li>
+					</ul>
+				</li>
+				<li id="ann3"><h3 class='ann_sub_header'>如何選擇合適的瑜珈服?</h3>
+					<ul style="line-height: 40px;">
+						<li>瑜珈體位法練習會有前彎、後彎、扭轉、伸展等動作，如何正確地使用肌肉骨骼與關節來練習，攸關練習時的安全性。因此選擇瑜珈服時，除了要舒適、合身、便於動作之外，也要選擇讓瑜珈指導師能看清楚你的肌肉與關節走向的衣服。
+						</li>
+					</ul>
+				</li>
+				<li id="ann4"><h3 class='ann_sub_header'>瑜珈對於我最熱愛的運動有什麼幫助??</h3>
+					<ul style="line-height: 40px;">
+						<li>對於熱愛跑步的人，瑜珈練習可協助紓緩、延展腿部肌肉及提升肌耐力。同時，瑜珈的呼吸練習也能在跑步時，幫助保持順暢、穩定的深呼吸。
+						</li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+		</div>
+		<div id="callme" class="blocks">
+			<div class="ball tel">
+				<ul>
+					<i class="fas fa-phone fa-4x"></i>
+					<li>電話號碼</li>
+					<li>04-7000000</li>
+					<li>0980-00000</li>
+				</ul>
+			</div>
+			<div class="ball email">
+				<ul>
+					<i class="fas fa-envelope fa-4x"></i>
+					<li>電子信箱</li>
+					<li>feng@yahoo.com</li>
+				</ul>
+			</div>
+			<div class="ball add">
+				<ul>
+					<i class="fas fa-home fa-4x"></i>
+					<li>地址</li>
+					<li>彰化市介壽北路1號</li>
+				</ul>
+			</div>
+			<div class="ball time">
+				<ul>
+					<i class="far fa-calendar-alt fa-4x"></i>
+					<li>營業時間</li>
+					<li>10:00~20:00</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		<div id="footer"></div>
+	</div>
+<!-- 圖片滑動效果 -->
+  <!-- Swiper JS -->
+  <script src="swiper-4.2.6/dist/js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+<!-- TAB切換頁面效果 -->
+<script>
+	function changeNews(index)  
+	{  
+	    document.getElementById("news-"+index).style.display="block";     
+	    document.getElementById("news_a-"+index).className="nowShowB";  
+	    var i=1; 
+	    while(document.getElementById("news-"+i))  
+	    {  
+	        if(i!=index){  
+	        clearDisplay1(i);  
+	        document.getElementById("news_a-"+i).className="otherB";  
+	        }  
+	        i++;  
+	    }  
+	}  
+	function clearDisplay1(index)  
+	{  
+	    document.getElementById("news-"+index).style.display="none";  
+	}  
+
+// ------------------------------------------------------------
+	function changeTab(index)  
+	{  
+	    document.getElementById("tabs-"+index).style.display="block";     
+	    document.getElementById("tab_a-"+index).className="nowShowA";  
+	    var i=1; 
+	    while(document.getElementById("tabs-"+i))  
+	    {  
+	        if(i!=index){  
+	        clearDisplay(i);  
+	        document.getElementById("tab_a-"+i).className="otherA";  
+	        }  
+	        i++;  
+	    }  
+	}  
+	function clearDisplay(index)  
+	{  
+	    document.getElementById("tabs-"+index).style.display="none";  
+	}  
+
+//-------------------------------------
+	var oList = document.querySelector("#list");
+	var oMenu = document.querySelector("#menu");
+	oList.onclick = function(){
+	oMenu.classList.toggle("active");
+	}
+</script>
+<!-- *************************************************** -->
 </body>
-</html>
+</html> 
