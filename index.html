@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html><!--20180523_updata-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<title>FengYoga</title>
-	<link rel="stylesheet" href="style/2018-05-21-yoga.css">
+	<link rel="stylesheet" href="style/yoga.css">
 	<link rel="stylesheet" href="swiper-4.2.6/dist/css/swiper.min.css">
 	<link href="style/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" media="screen, print, handheld" type="text/css" href="style/calendar.css" />
+        <script type="text/javascript" src="style/calendar.js"></script>
 <!-- 摺疊效果 -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script type="text/javascript" language="javascript">
@@ -81,7 +84,8 @@
 <!-- *************************************************** -->
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide box1-1"><h2>更有活力、更加強壯、更為快樂，做就對了。</h2>
+					<div class="swiper-slide box1-1">
+						<h2>更有活力、更加強壯、更為快樂，做就對了。</h2>
 					</div>
 					<div class="swiper-slide box1-2">
 						<h2>瑜珈是一種能修身養性的運動，藉由調身、調息、調心，以達到身心的合一。</h2>
@@ -159,7 +163,10 @@
 		<div id="course">
 			<div class="blocks">
 				<h2>瑜珈課程</h2>
-				<div class="box6"></div>
+				<!-- <div class="box6"></div> -->
+				<script type="text/javascript">
+				calendar();
+				</script>
 			</div>
 		<div id="type" class="blocks"><h2 style="font-size: 20px;color:#777;">課程種類</h2> 				
 			<div class="btn">
@@ -216,21 +223,18 @@
 					</ul>
 				</div>				
 			</div>
-			<div id="form" class="blocks">
-				<div class="form_block" style="line-height: 40px;">
+			<div id="form">
+				<div class="form_block">
 					<form action="get.php" method="get">
-						<h2 text-align:center;>報名表</h2>
-						性別：<select name="sex" id="">
-							<option value="none">選擇</option>
-							<option value="woman">查母</option>
-							<option value="man">查普</option>
-						</select>
-						<hr>	
-						姓名：<input type='text'><br>			
-						<hr>
-						電話：<input type='text'><br>
-						<hr>
-						生日：<select name="Y" id="">
+						<h3 class="form">報名表</h3>
+						<div class="form name">
+							姓名：<input type='text'><br>
+						</div>
+						<div class="form tel">
+							電話：<input type='text'><br>
+						</div>
+						<div class="form brithday">
+							生日：<select name="Y" id="">
 							<option value="1911">1911</option>
 							<option value="1988">1988</option>
 							<option value="2000">2000</option>
@@ -245,8 +249,21 @@
 							<option value="2">2</option>
 							<option value="3n">3</option>
 						</select>
-						信箱：<input type='text'><br>
-						<input type='reset' value='我要報名' style="position: absolute;right: 110px;bottom: 50px;">
+						</div>
+						<div class="form mail">
+							信箱：<input type='text'><br>
+						</div>
+						<div class="form sex">
+							性別：<select name="sex" id="">
+							<option value="none">選擇</option>
+							<option value="woman">查母</option>
+							<option value="man">查普</option>
+							</select>
+						</div>
+						<div class="form go">
+							<input type='reset' value='我要報名'>
+						</div>
+						
 					</form>
 				</div>
 			</div>
