@@ -6,6 +6,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- link icon -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
@@ -60,9 +64,59 @@
       border-radius: 50%;
     }
 
+    .ball {
+      width: 200px;
+      height: 200px;
+      background-color: #fcf;
+      border-radius: 50%;
+      /* float: left; */
+      margin-left: 1em;
+      margin-bottom: 1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .ball ul i {
+      transform: translate(-20%, -15%);
+    }
+
+    .ball ul li {
+      list-style-type: none;
+      transform: translate(-20%, 0);
+    }
+
     #footer {
       height: 200px;
       background-color: #fcf;
+    }
+
+    .container {
+      width: 50%;
+    }
+
+    #callme .container {
+      width: 70%;
+    }
+
+    @media (max-width: 1199.98px) {
+      #callme .container {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .ball {
+        margin: 0 auto 1em;
+      }
+      .container {
+        width: 100%;
+      }
+
+      #callme .container {
+        width: 100%;
+      }
     }
   </style>
 
@@ -221,10 +275,10 @@
   <div class="container">
     <div class="row align-items-center justify-content-around">
       <div class="col-12 col-md-6 col-xl-6">
-        <div class="teacher-pic bg-img mb-3"></div>
+        <div class="teacher-pic bg-img mr-auto ml-auto mb-3"></div>
       </div>
       <div class="col-12 col-md-6 col-xl-6">
-        <div class="card border-light mb-3" style="max-width: 18rem;">
+        <div class="card border-light mb-3">
           <div class="card-header">Feng</div>
           <div class="card-body">
             <h5 class="card-title">對我來說，瑜珈是身心靈的斷捨離，將不好的東西送出去，達到心靈上的自由，身體上的自由，思想上的自由。讓自己的身心靈，呈現自然、舒適、平衡的狀態。</h5>
@@ -239,11 +293,13 @@
   <div class="card bg-dark text-white mb-3">
     <img class="card-img" src="img/box1-3.jpg" alt="Card image">
     <div class="card-img-overlay">
-      <h4 class="card-title text-center">上課須知</h4>
-      <p class="card-text">因個人衛生問題，請自備瑜珈墊及毛巾等個人物品。</p>
-      <p class="card-text">上課前一個小時，請勿進食，以免課堂中不適，若必須吃，少量斟酌。</p>
-      <p class="card-text">懷孕、身上有動過大手術或有心血管疾病者，在上課前必須先告知老師，會調整個人姿勢動作方式。</p>
-      <p class="card-text">Last updated 3 mins ago</p>
+      <div class="container">
+        <h4 class="card-title text-center">上課須知</h4>
+        <p class="card-text">因個人衛生問題，請自備瑜珈墊及毛巾等個人物品。</p>
+        <p class="card-text">上課前一個小時，請勿進食，以免課堂中不適，若必須吃，少量斟酌。</p>
+        <p class="card-text">懷孕、身上有動過大手術或有心血管疾病者，在上課前必須先告知老師，會調整個人姿勢動作方式。</p>
+        <p class="card-text">Last updated 3 mins ago</p>
+      </div>
     </div>
   </div>
   <div id="form" class="box_navbar_h"></div>
@@ -332,7 +388,8 @@
       <div class="card">
         <div class="card-heade" id="headingOne" style="background-color: #fcf;">
           <h5 class="mb-0">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: black">身體僵硬的人適合練習瑜珈嗎?
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+              style="color: black">身體僵硬的人適合練習瑜珈嗎?
             </button>
           </h5>
         </div>
@@ -345,7 +402,8 @@
       <div class="card">
         <div class="card-header" id="headingTwo" style="background-color: #fcf;">
           <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: black">練習瑜珈有什麼好處?
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+              style="color: black">練習瑜珈有什麼好處?
             </button>
           </h5>
         </div>
@@ -358,7 +416,8 @@
       <div class="card">
         <div class="card-header" id="headingThree" style="background-color: #fcf;">
           <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: black">如何選擇合適的瑜珈服?
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+              style="color: black">如何選擇合適的瑜珈服?
             </button>
           </h5>
         </div>
@@ -371,7 +430,8 @@
       <div class="card">
         <div class="card-header" id="headingFour" style="background-color: #fcf;">
           <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color: black">瑜珈對於我最熱愛的運動有什麼幫助?
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+              style="color: black">瑜珈對於我最熱愛的運動有什麼幫助?
             </button>
           </h5>
         </div>
@@ -384,61 +444,51 @@
     </div>
   </div>
   <div id="callme" class="box_navbar_h"></div>
-  <h4 class="text-center mb-5">聯絡我們</h4>
-  <div class="container">
-    <div class="card-deck">
-      <div class="row align-items-center">
+  <div id="callme">
+    <h4 class="text-center mb-5">聯絡我們</h4>
+    <div class="container">
+      <div class="row">
         <div class="col-12 col-md-6 col-xl-3">
-          <div class="card mb-3">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">電話號碼</h5>
-              <p class="card-text">0980-00000</p>
-              <p class="card-text">
-                <small class="text-muted">04-7000000</small>
-              </p>
-            </div>
+          <div class="ball tel">
+            <ul>
+              <i class="fas fa-phone fa-4x"></i>
+              <li>電話號碼</li>
+              <li>04-7000000</li>
+              <li>0980-00000</li>
+            </ul>
           </div>
         </div>
         <div class="col-12 col-md-6 col-xl-3">
-          <div class="card mb-3">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">電子信箱</h5>
-              <p class="card-text">feng@yahoo.com</p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
+          <div class="ball email">
+            <ul>
+              <i class="fas fa-envelope fa-4x"></i>
+              <li>電子信箱</li>
+              <li>feng@yahoo.com</li>
+            </ul>
           </div>
         </div>
         <div class="col-12 col-md-6 col-xl-3">
-          <div class="card mb-3">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">地址</h5>
-              <p class="card-text">彰化市介壽北路1號</p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
+          <div class="ball add">
+            <ul>
+              <i class="fas fa-home fa-4x"></i>
+              <li>地址</li>
+              <li>彰化市介壽北路1號</li>
+            </ul>
           </div>
         </div>
         <div class="col-12 col-md-6 col-xl-3">
-          <div class="card mb-3">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">營業時間</h5>
-              <p class="card-text">10:00~20:00</p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
+          <div class="ball time">
+            <ul>
+              <i class="far fa-calendar-alt fa-4x"></i>
+              <li>營業時間</li>
+              <li>10:00~20:00</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <div id="footer">
 
   </div>
